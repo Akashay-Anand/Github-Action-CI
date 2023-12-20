@@ -10,6 +10,13 @@
 - GitHub Actions enables developers to automate workflows across issues, pull requests, and more
 - The feature brings automation into the software development lifecycle using event-driven triggers, ranging from creating pull requests to building a new brand in a repository.
 
+### use Case of github action
+- CI/CD
+- Testing
+- Notifications
+- code Analysis
+
+
 ## Workflows
 > It is an specific folder we create inside ‘.github’ directory. And this file contains all required instruction for events
 
@@ -35,6 +42,14 @@
 - jobs can ither run a script or run an action,
 
 ### Actions
-
+> An action is a custom application for the GitHub Actions platform that performs a complex but frequently repeated task
 
 - You can build your own actions or reuse open-source actions available on the GitHub marketplace.
+
+### Runner
+- A runner is a series of tasks that are executed in a workflow when triggered by an event. Each runner is responsible for executing a single job.
+
+
+```
+GitHub Actions uses workflows, which are automated processes that are made up of jobs, events, actions and runners. Events are triggers that start a workflow, jobs are tasks executed in a workflow, when an event is triggered, actions are used to perform complex tasks that are imported into workflows, and runners execute a single job.
+```
