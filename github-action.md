@@ -16,6 +16,7 @@
 - Notifications
 - code Analysis
 
+> note: migration coud be challenging if we swith somewhere else from github
 
 ## Workflows
 > It is an specific folder we create inside ‘.github’ directory. And this file contains all required instruction for events
