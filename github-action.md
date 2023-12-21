@@ -54,3 +54,39 @@
 ```
 GitHub Actions uses workflows, which are automated processes that are made up of jobs, events, actions and runners. Events are triggers that start a workflow, jobs are tasks executed in a workflow, when an event is triggered, actions are used to perform complex tasks that are imported into workflows, and runners execute a single job.
 ```
+
+# Context 
+> Contexts like github, env, and secrets provide dynamic data available throughout your workflow, influencing how steps are executed or what information is accessible.
+
+## comprehensive list of contexts available within GitHub Actions workflows, organized by where they're accessible:
+
+> Workflow-level contexts:
+
+- github: Provides information about the GitHub event that triggered the workflow, the repository, the workflow itself, and more.
+- env: Allows you to set environment variables that are available throughout the entire workflow.
+- secrets: Contains sensitive information encrypted by GitHub, accessible securely within your workflow.
+- inputs: Accesses input values provided when a workflow is triggered manually or from another workflow.
+
+> Job-level contexts:
+
+- needs: Specifies dependencies between jobs, ensuring one job completes successfully before another starts.
+- strategy: (as discussed previously) Controls how multiple runs of a job are created and executed.
+- matrix: Within strategy, defines a matrix of different configurations for a job to run against.
+- inputs: Accesses input values passed to a specific job.
+- vars: Sets variables that are only available within the job.
+
+> Container-level contexts:
+
+- needs: Specifies dependencies between container jobs.
+- strategy: Controls how multiple runs of a container job are created and executed.
+- matrix: Defines a matrix of different configurations for a container job to run against.
+- env: Sets environment variables within the container.
+- vars: Sets variables that are only available within the container.
+- secrets: Accesses encrypted secrets within the container environment.
+- inputs: Accesses input values passed to the container job.
+
+> Steps-level contexts:
+
+- runner: Provides information about the runner executing the step, such as its operating system and architecture.
+- job: Accesses information about the job that the step is running in.
+- steps: Exposes information about previous steps in the job.
