@@ -90,3 +90,41 @@ GitHub Actions uses workflows, which are automated processes that are made up of
 - runner: Provides information about the runner executing the step, such as its operating system and architecture.
 - job: Accesses information about the job that the step is running in.
 - steps: Exposes information about previous steps in the job.
+  
+# keywords apart form context in workflow
+
+> Workflow-level keywords:
+
+- name: Assigns a name to the workflow for identification.
+- on: Specifies events that trigger the workflow (e.g., push, pull_request).
+- env: Sets environment variables available throughout the workflow.
+- secrets: Accesses encrypted secrets stored in GitHub.
+- defaults: Establishes default settings for jobs or steps.
+
+> Job-level keywords:
+
+- runs-on: Determines the virtual environment where the job runs (e.g., ubuntu-latest).
+- container: Specifies a container image for the job.
+- needs: Defines dependencies between jobs.
+- strategy: Controls how multiple runs of a job are created (e.g., for matrix builds).
+- if: Conditionally executes a job based on certain criteria.
+- defaults: Sets default settings for steps within the job.
+
+> Steps-level keywords:
+
+- name: Assigns a name to the step for logging and clarity.
+- uses: References a GitHub Action to execute in the step.
+- run: Executes a shell command or script.
+- with: Passes input values to an action.
+- if: Conditionally executes a step within a job.
+- env: Sets environment variables specific to the step.
+- working-directory: Changes the working directory for the step.
+
+> Additional keywords:
+
+- expression: Accesses context data, secrets, or performs conditional logic (e.g., ${{ github.ref }}).
+- YAML syntax keywords: While not specific to GitHub Actions, YAML keywords like jobs, runs-on, steps, etc., are essential for structuring workflow files.
+
+
+- https://docs.github.com/en/actions/learn-github-actions/contexts 
+- 
